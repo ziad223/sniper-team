@@ -1,0 +1,298 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 90%;
+    margin: 100px auto;
+}
+/* html{
+    scroll-behavior: smooth;
+} */
+
+
+/* Navbar */
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding: 20px 60px;
+    z-index: 2;
+    background-color: #ccc;
+}
+.navbar .menu{
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.logo{
+    font-size: 18px;
+
+}
+.logo span{
+    font-weight: normal;
+}
+
+.navbar ul{
+    list-style: none;
+    /* display: flex;
+    gap: 25px; */
+}
+.navbar ul li{
+    display: inline-block;
+    margin-right: 25px;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    transition: 0.5s;
+    padding: 10px;
+
+}
+.navbar ul li a:hover{
+    background-color: #ccc;
+}
+
+/* Header */
+
+.header{
+    background-image: url(imgs/header.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.header h2{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    color: #fff;
+    font-size: 40px;
+}
+.header h2 span{
+    background-color: #000;
+    padding: 10px;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+/* Projects */
+.homes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.homes .home{
+    width: 24%;
+    position: relative;
+}
+
+.homes .home img{
+    width: 100%;
+}
+.homes .home p{
+     background-color: #000;
+     color: #fff;
+     padding: 10px;
+     position: absolute;
+     top: 0;
+}
+
+/* About */
+
+.chars{
+    margin-top: 100px;
+    display: flex;
+    gap: 10px;
+}
+.chars .char{
+    width: 24%;
+}
+.chars .char img{
+    width: 100%;
+}
+.chars .char > * {
+    margin-top: 20px;
+}
+
+.chars .char h3{
+    font-size: 20px;
+}
+.chars .char h4{
+  font-size: 18px;
+  opacity: 0.5;
+}
+.chars .char  p{
+    line-height: 1.8;
+}
+.chars .char button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.chars .char button:hover{
+    background-color: #ccc;
+}
+
+/* Contact */
+
+.contact form {
+margin-top: 50px;
+}
+.contact form input{
+    width: 80%;
+    margin-top: 10px;
+    padding: 15px;
+    outline: none;
+}
+
+.contact form input::placeholder{
+    font-size: 16px;
+}
+.contact button{
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+}
+.contact button:hover{
+    background-color: grey;
+    color: black;
+}
+
+
+/* Photo */
+
+.photo img{
+    width: 100%;
+}
+
+/* Footer */
+
+.footer{
+background-color: #000;
+color: #ffff;
+padding: 50px;
+text-align: center;
+font-size: 22px;
+}
+.footer p span{
+    color: orange;
+    font-weight: bold;
+}
+
+/* Media Query  */
+
+
+
+/*  Mobile Phone */
+
+@media screen and (max-width : 450px){
+    .navbar ul{
+        display: none;
+    }
+    .navbar .menu{
+     display: block;
+    }
+
+    /* Header */
+
+.header h2{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    color: #fff;
+    font-size: 30px;
+}
+.header h2 span{
+    background-color: #000;
+    padding: 10px;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+/* Projects */
+
+hr{
+    margin: 50px 0px;
+    opacity: 0.5;
+}
+
+.homes{
+   flex-direction: column
+}
+.homes .home{
+    width: 100%;
+    position: relative;
+}
+
+
+/* About */
+
+.chars{
+    flex-direction: column;
+}
+.chars .char{
+    width: 100%;
+}
+
+
+}
+
+@media screen and (min-width : 451px) and (max-width : 768px){
+    .navbar ul{
+        display: none;
+    }
+    .navbar .menu{
+     display: block;
+    }
+
+    /* Header */
+
+.header h2{
+    top: 45%;
+    left: 30%;
+    font-size: 40px;
+}
+/* Projects */
+
+.projects h2{
+    margin: 50px 0px;
+}
+.homes {
+    margin-top: 50px;
+}
+.homes .home{
+    width: 45%;
+}
+
+
+/* About */
+
+.chars {
+    flex-wrap: wrap;
+}
+.chars .char{
+    width: 47%;
+}
+}
